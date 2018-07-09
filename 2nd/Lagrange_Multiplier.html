@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lagrange Multiplier</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+      @import url('https://fonts.googleapis.com/css?family=Righteous');
+      @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+      @import url('https://fonts.googleapis.com/css?family=Caveat');
+
+      body { font-family: 'EB Garamond'; }
+      h1, h2, h3, h4, h5 {
+        font-family: 'Caveat';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      #tab01 {
+        border-collapse: collapse;
+        width: 80%;
+      }
+
+      #tab01 td, #tab01 th {
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #tab01 tr:nth-child(even){
+        background-color: #f2f2f2;
+      }
+
+      #tab01 tr:hover {background-color: #ddd;}
+
+      #tab01 th {
+        padding-top: 8px;
+        padding-bottom:8px;
+        text-align: center;
+        background: #555555;
+        color: #f2f2f2;
+      }
+
+      #tab01 td {
+        text-align:center;
+      }
+
+      .remark-container {
+        background-color: pink;
+      }
+
+      #yeji {
+        border-style: solid;
+        border-color: rgb(28, 28, 110);
+        text-align: center;
+        border-width: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Lagrange Multiplier
+
+<h3 style="color:#0312a5">Yeji Park</h3>
+
+---
+
+# Contents
+
+<br/>
+  
+<h3 style="color:#0312a5", align="center">What the Lagrange Multiplier is</h3>
+
+<h3 style="color:#0312a5", align="center">Explaination at Low level</h3>  
+
+<h3 style="color:#0312a5", align="center">Derivation</h3>  
+
+<h3 style="color:#0312a5", align="center">Least Square</h3> 
+---
+
+class: center, middle
+
+# What  
+### the Lagrange Multiplier is
+---
+class: center, middle
+<div id="yeji" >  
+<br/>
+Hereafter, we will deal with errors, especially with them being reduced.
+<p style="color:peru", align:center>It can be called "OPTIMAZATION"</p>
+
+<img src="Down_Arrow.png" alt="Down_Arrow" width="10%"> 
+
+<p>We need the way to satisfy above needs even whatever the form of errors.</p>
+
+<img src="Down_Arrow.png" alt="Down_Arrow" width="10%">
+
+<p>In mathematics, there are some ways to solve the problem.</p> 
+
+</div>
+
+---
+
+The Lagrange Multiplier that is one of the ways can help someone who want to get maximum or minimum of a function:
+
+\begin{align}
+      f(x,y)
+\end{align}
+
+where the function has two variables.
+
+---
+class: center, middle
+
+# Explanation  
+### at low level
+
+---
+class: center, middle
+
+# Derivation
+---
+\begin{align}
+  \mathcal{L}(x,y,\lambda) = f(x,y) + \lambda \cdot g(x,y) 
+\end{align}
+
+\begin{align}
+  \nabla_{x,y,\lambda} \mathcal{L} = 0 ~ \Rightarrow ~ 
+  \begin{cases} g(x,y) = 0 \\\ \nabla f(x,y) = \lambda \nabla g(x,y) \end{cases}
+\end{align}
+
+Let's optimaze `\(l_2\)` norm. We can use quadratic form of the norm since `\( \sqrt{~~} \)` is a monotonic increasing function
+
+\begin{align}
+  ||\omega||_2^2 = (\sum x_i^2)
+\end{align}
+---
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+    <script>
+      var slideshow = remark.create();
+
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
